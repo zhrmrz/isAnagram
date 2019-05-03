@@ -1,0 +1,17 @@
+class Sol:
+    def isAnagram(self,s,t):
+        list=[]
+        if len(s)!=len(t):
+            return False
+        for char in s:
+            list.append(char)
+        for char in t:
+            if char in list:
+                list.remove(char)
+        if list!=[]:
+            return False
+        return True
+
+if __name__ == '__main__':
+    p1=Sol()
+    print(p1.isAnagram('listen','silent'))
